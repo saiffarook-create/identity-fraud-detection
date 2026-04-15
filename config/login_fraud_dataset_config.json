@@ -1,0 +1,19 @@
+{
+  "target_column": "label",
+  "id_columns": [
+    "row_id",
+    "session_id",
+    "src_ip"
+  ],
+  "drop_columns": [],
+  "user_id_column": null,
+  "timestamp_column": "timestamp",
+  "device_column": "user_agent",
+  "location_column": "country_code",
+  "amount_column": null,
+  "failed_login_column": "failed_logins_last_24h",
+  "top_k_features": 20,
+  "test_size": 0.15,
+  "validation_size": 0.15,
+  "random_state": 42
+}

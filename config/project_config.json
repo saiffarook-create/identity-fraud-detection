@@ -1,0 +1,15 @@
+{
+  "target_column": "is_fraud",
+  "id_columns": [],
+  "drop_columns": [],
+  "user_id_column": "user_id",
+  "timestamp_column": "event_timestamp",
+  "device_column": "device_type",
+  "location_column": "location",
+  "amount_column": "transaction_amount",
+  "failed_login_column": "failed_login_attempts",
+  "top_k_features": 20,
+  "test_size": 0.15,
+  "validation_size": 0.15,
+  "random_state": 42
+}

@@ -1,0 +1,79 @@
+{
+  "best_model_name": "logistic_regression",
+  "target_column": "label",
+  "top_features": [
+    "num__payload_anomaly_score",
+    "num__password_entropy",
+    "num__failed_logins_last_24h",
+    "num__geo_velocity_kmph",
+    "num__bytes_received",
+    "num__session_duration_sec",
+    "num__device_fingerprint_match",
+    "num__login_attempts_last_1h",
+    "num__account_age_days",
+    "num__num_requests_per_session",
+    "num__rare_device_location_flag",
+    "num__bytes_sent",
+    "num__failed_logins_last_24h_flag",
+    "num__is_tor_exit_node",
+    "num__is_vpn"
+  ],
+  "train_shape": [
+    315,
+    26
+  ],
+  "validation_shape": [
+    67,
+    26
+  ],
+  "test_shape": [
+    68,
+    26
+  ],
+  "columns_seen_during_training": [
+    "timestamp",
+    "dst_port",
+    "country_code",
+    "user_agent",
+    "login_attempts_last_1h",
+    "failed_logins_last_24h",
+    "session_duration_sec",
+    "bytes_sent",
+    "bytes_received",
+    "num_requests_per_session",
+    "password_entropy",
+    "account_age_days",
+    "is_vpn",
+    "is_tor_exit_node",
+    "device_fingerprint_match",
+    "geo_velocity_kmph",
+    "new_device",
+    "captcha_triggered",
+    "login_hour",
+    "weekend_login",
+    "payload_anomaly_score",
+    "failed_logins_last_24h_flag",
+    "rare_device_location_flag",
+    "event_hour",
+    "event_dayofweek",
+    "is_night_event"
+  ],
+  "cross_validation": {
+    "precision": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "recall": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "f1": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "roc_auc": {
+      "mean": 1.0,
+      "std": 0.0
+    }
+  }
+}

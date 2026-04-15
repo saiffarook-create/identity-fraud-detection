@@ -1,0 +1,4 @@
+user_id,event_timestamp,device_type,location,transaction_amount,failed_login_attempts,session_duration,transaction_amount_is_high_value,failed_login_attempts_flag,user_event_count,amount_vs_user_mean,rare_device_location_flag,event_hour,event_dayofweek,is_night_event,fraud_probability,prediction,prediction_reason
+user_8,2026-01-04 15:20:00,desktop,Giza,71,1,13,0,0,1,0.0,1,15,6,0,0.02596732786241568,0,"Top model signals: num__failed_login_attempts_flag, num__is_night_event, num__transaction_amount"
+user_1,2026-01-06 12:20:00,mobile,Cairo,72,0,10,0,0,1,0.0,1,12,1,0,0.07212156613606152,0,"Top model signals: num__failed_login_attempts_flag, num__is_night_event, num__transaction_amount"
+user_10,2026-01-10 01:10:00,mobile,Cairo,1210,6,2,1,1,1,0.0,1,1,5,1,0.9644579774697244,1,"Top model signals: num__failed_login_attempts_flag, num__is_night_event, num__transaction_amount"

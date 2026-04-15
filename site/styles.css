@@ -1,0 +1,374 @@
+:root {
+  --bg: #f4efe7;
+  --surface: #fffaf4;
+  --surface-strong: #f2e7d8;
+  --ink: #16222a;
+  --muted: #59656d;
+  --accent: #0c7c59;
+  --accent-deep: #084c61;
+  --gold: #d4a373;
+  --dark: #11212d;
+  --line: rgba(17, 33, 45, 0.12);
+  --shadow: 0 20px 60px rgba(17, 33, 45, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(212, 163, 115, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(12, 124, 89, 0.16), transparent 24%),
+    linear-gradient(180deg, #fbf6ef 0%, #f4efe7 42%, #f8f3ed 100%);
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Palatino Linotype", serif;
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
+}
+
+.hero {
+  padding: 1.4rem clamp(1.2rem, 3vw, 3rem) 4rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  max-width: 12ch;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  max-width: 62ch;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button.primary {
+  background: var(--ink);
+  color: white;
+}
+
+.button.secondary {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.62);
+}
+
+.hero-panel,
+.panel,
+.info-card,
+.gallery-card,
+.step {
+  background: rgba(255, 250, 244, 0.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(17, 33, 45, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  border-radius: 28px;
+  padding: 1.4rem;
+  align-self: stretch;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, rgba(8, 76, 97, 0.96), rgba(12, 124, 89, 0.92));
+  color: white;
+  border-radius: 22px;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.metric-card.compact {
+  min-height: 120px;
+  justify-content: center;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.metric-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.82;
+}
+
+.metric-value {
+  font-size: clamp(1.4rem, 3vw, 2.3rem);
+  font-weight: 700;
+}
+
+.hero-note {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.section {
+  padding: 1rem clamp(1.2rem, 3vw, 3rem) 4rem;
+}
+
+.section.accent {
+  background: linear-gradient(180deg, rgba(242, 231, 216, 0.62), rgba(248, 243, 237, 0.42));
+}
+
+.section.dark {
+  background: linear-gradient(180deg, #10222c 0%, #16222a 100%);
+  color: #f7f4ef;
+}
+
+.section-heading {
+  margin-bottom: 1.6rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.section-heading.light .eyebrow,
+.section-heading.light h2 {
+  color: #f7f4ef;
+}
+
+.cards.three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.info-card,
+.panel,
+.step,
+.gallery-card {
+  border-radius: 24px;
+  padding: 1.2rem;
+}
+
+.info-card p,
+.panel p,
+.step p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.step-index {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.2rem;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.94rem;
+}
+
+th {
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.simple-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.8;
+}
+
+.note-box {
+  background: rgba(212, 163, 115, 0.12);
+  border-left: 4px solid var(--gold);
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.gallery-card {
+  background: rgba(255,255,255,0.06);
+}
+
+.gallery-card img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.gallery-card figcaption {
+  color: #f7f4ef;
+}
+
+.text-link {
+  text-decoration: none;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.footer {
+  padding: 2rem 1.2rem 3rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+code {
+  background: rgba(17, 33, 45, 0.08);
+  padding: 0.2rem 0.45rem;
+  border-radius: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(12, 124, 89, 0.1);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid,
+  .results-grid,
+  .cards.three,
+  .timeline,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    max-width: none;
+  }
+}
