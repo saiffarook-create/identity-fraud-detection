@@ -1,0 +1,13 @@
+# Secrets
+.kaggle/
+kaggle.json
+.env
+.env.*
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
